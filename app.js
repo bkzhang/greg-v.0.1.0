@@ -7,6 +7,7 @@ const configFile = argv.config || 'config'
 const config = require(path.join(__dirname, configFile))
 const Command = require('./commands')
 
+
 const bot = new Discord.Client({
   owner: config.owner  
 })
