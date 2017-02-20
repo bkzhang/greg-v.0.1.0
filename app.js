@@ -7,8 +7,11 @@ const configFile = argv.config || 'config'
 const config = require(path.join(__dirname, configFile))
 
 const bot = new commando.Client({
-  owner: config.owner 
+  owner: config.owner,
+  commandPrefix: '/'
 })
+
+const sqlite = require('sqlite')
 
 bot
   .on('error', console.error)
@@ -25,9 +28,14 @@ bot
     console.warn('Reconnecting...slowly')
   })
 
+bot.setProvider(
+  sqlite.open(path.join(__dirname, 'settings.sqlite3'))
+    .then(db => new commando.SQLiteProvider(db))
+  ).catch(console.error)
+
 bot.registry
   .registerGroups([
-    ['shitposts', 'Shit Posts Messages'],
+    ['shitposts', 'Shit Post Messages'],
     ['random', 'Random']
   ])
   .registerDefaults()
