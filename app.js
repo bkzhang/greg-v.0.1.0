@@ -8,7 +8,7 @@ const config = require(path.join(__dirname, configFile))
 
 const bot = new commando.Client({
   owner: config.owner,
-  commandPrefix: '/'
+  commandPrefix: '!'
 })
 
 const sqlite = require('sqlite')
