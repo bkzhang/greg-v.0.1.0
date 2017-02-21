@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-const Command = (() => {
+const FUNCTIONS = (() => {
   function msg(string, message) {
     return message.content.toLowerCase().startsWith(string)
   }
@@ -10,4 +10,4 @@ const Command = (() => {
   }
 })()
 
-module.exports = Command
+module.exports = FUNCTIONS 
