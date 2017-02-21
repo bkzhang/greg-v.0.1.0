@@ -107,7 +107,7 @@ bot
       case 1:
         member.guild.defaultChannel.sendMessage(`${member.user} tripped over my candy trail!`)
         break
-      case 2: 
+      case 2:  
         member.guild.defaultChannel.sendMessage(`${member.user} has beautiful eyes`)
         break
       default:
@@ -133,7 +133,7 @@ bot
     } else if (FUNCTION.msg('i dont get it', message) || (FUNCTION.msg('i don\'t get it', message))) {
       message.channel.sendMessage('That Endicott pegged me all wrong, I got no sense, no sense at all')
     } else if (FUNCTION.msg('shh', message)) {
-      message.chann.sendMessag('You shush!')
+      message.channel.sendMessage('You shush!')
     } else if (FUNCTION.msg('pardon me', message)) {
       message.channel.sendMessage('are you Aaron Burr, sir?')
     }
