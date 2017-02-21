@@ -5,8 +5,13 @@ const FUNCTIONS = (() => {
     return message.content.toLowerCase().startsWith(string)
   }
 
+  function roll(number) {
+    return Math.floor(Math.random() * number) + 1
+  }
+
   return {
-    msg
+    msg,
+    roll
   }
 })()
 

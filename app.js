@@ -16,9 +16,8 @@ bot
   .on('debug', console.log)
   .on('ready', () => {
     console.log('shitposts ready and loaded')
-    console.log(`logged in as ${bot.user.username}#${bot.user.discriminator} (${bot.user.id})`)
-    let roll = Math.floor(Math.random() * 4) + 1
-    switch(roll) {
+    console.log(`logged in as ${bot.user.username}#${bot.user.discriminator} (${bot.user.id})`) 
+    switch(FUNCTION.roll(4)) {
       case 1: 
         bot.user.setGame('Drum me in the face')
         break
@@ -43,9 +42,8 @@ bot
     console.warn('Reconnecting...slowly')
   })
   .on('guildMemberAdd', member => {
-    let guild = member.guild.defaultChannel
-    let roll = Math.floor(Math.random() * 11) + 1
-    switch (roll) {
+    let guild = member.guild.defaultChannel 
+    switch (FUNCTION.roll(11)) {
       case 1:
         guild.sendMessage('Hi Kitty')
         break
@@ -85,17 +83,20 @@ bot
     } 
   })
   .on('guildCreate', guild => {
-    console.log(`Joined ${guild.name} owned by ${guild.owner.user.username} on ${new Date()}`)
-    let roll = Math.floor(Math.random() * 2) + 1
-    switch (roll) {
+    console.log(`Joined ${guild.name} owned by ${guild.owner.user.username} on ${new Date()}`) 
+    switch (FUNCTION.roll(3)) {
       case 1:
         guild.defaultChannel.sendMessage(`I WILL RAIN TERROR AND MANURE ON ${guild.name}`)
         break
       case 2:
         guild.defaultChannel.sendMessage(`Ew...another server, ${guild.owner.user.username} please kick me`)
         break
+      case 3:
+        guild.defaultChannel.sendMessage('Mmm banana nut duck bread')
+        break
       default:
         console.log('oops baka')
+        break
     }
   })
   .on('guildDelete', guild => {

@@ -1,4 +1,5 @@
 const commando = require('discord.js-commando')
+const FUNCTION = require('../../functions.js')
 
 class DDRoll extends commando.Command {
   constructor(client) {
@@ -10,9 +11,8 @@ class DDRoll extends commando.Command {
     })
   }
   
-  async run(message, args) {
-    let roll = Math.floor(Math.random() * 20) + 1
-    message.reply('rolled a ' + roll)
+  async run(message, args) { 
+    message.reply('rolled a ' + FUNCTION.roll(20))
   }
 }
 
