@@ -7,7 +7,7 @@ const FUNCTION = require('./functions')
 
 const bot = new commando.Client({
   owner: config.owner,
-  commandPrefix: '!'
+  commandPrefix: config.prefix
 })
 
 bot
@@ -101,6 +101,22 @@ bot
   })
   .on('guildDelete', guild => {
     console.log(`Left ${guild.name} owned by ${guild.owner.user.username} on ${new Date()}`)
+  })
+  .on('guildMemberAdd', member => {
+    switch(FUNCTION.roll(2)) {
+      case 1:
+        member.guild.defaultChannel.sendMessage(`${member.user} tripped over my candy trail!`)
+        break
+      case 2: 
+        member.guild.defaultChannel.sendMessage(`${member.user} has beautiful eyes`)
+        break
+      default:
+        console.log('duh doh')
+        break
+    }
+  })
+  .on('guildMemberRemove', member => {
+    member.guild.defaultChannel.sendMessage(`LOLOLOL ${member.user.username} GOT KICKED`)
   })
   .on('message', (message) => {
     if (message.author.bot) return
