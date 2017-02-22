@@ -1,3 +1,5 @@
+'use strict'
+
 const commando = require('discord.js-commando')
 const FUNCTION = require('../../functions.js')
 

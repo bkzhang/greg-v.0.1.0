@@ -1,3 +1,5 @@
+'use strict'
+
 const commando = require('discord.js-commando')
 
 class NavySeal extends commando.Command {

@@ -1,3 +1,5 @@
+'use strict'
+
 const commando = require('discord.js-commando') 
 
 const path = require('path')
