@@ -1,9 +1,9 @@
 https://discordapp.com/oauth2/authorize?client_id=283288271956738048&scope=bot&permissions=2096626815
 
 ```bash
-git pull https://github.com/bkzhang/shitposts.git
+git pull https://github.com/bkzhang/greg-v.0.1.0.git 
 npm install
-cd shitposts
+cd greg-v.0.1.0 
 touch config.json
 ```
 
