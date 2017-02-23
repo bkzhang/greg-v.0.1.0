@@ -18,9 +18,9 @@ In your config.json
 ```
 quick note: command prefix only apply to official commands and not random comments that the bot will make during certain phrases
 
-To add bot to Discord server, use https://discordapi.com/permissions.html for easy permssions bit calculations
+To add bot to Discord server, use https://discordapi.com/permissions.html for easy permissions bit calculations
 
-To run server, (don't forget to add the bot to your Discord server) 
+To run server
 ```bash
 npm start
 ```
